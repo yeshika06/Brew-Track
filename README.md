@@ -20,23 +20,35 @@ This project analyzes coffee shop sales data using Excel, MySQL, and Power BI to
 
 # Tools & Technologies
 📄 Excel – Data entry, initial analysis, and basic reporting.
+
 🗄️ MySQL – Storing and managing sales, customer, and product data.
+
 📊 Power BI – Data visualization and dashboard creation for insights.
+
 🧮 SQL Queries – Data extraction, transformation, and analysis.
+
 🧠 DAX (Data Analysis Expressions) – Advanced calculations in Power BI.
 
  # Key Features & Capabilities
 📆 Sales Performance Tracking – Monitor daily, weekly, and monthly sales trends.
+
 🧍‍♂️ Customer Insights – Analyze customer preferences and peak sales hours.
+
 🧾 Product Performance Analysis – Identify best-selling and least-selling items.
+
 📊 Interactive Dashboards – Build dynamic, user-friendly dashboards in Power BI for real-time data exploration.
+
 💹 Revenue & Profit Analysis – Track total earnings and profit margins.
 
 # Outcomes
 📈 Improved Sales Tracking – Better monitoring of daily, weekly, and monthly sales.
+
 🧠 Enhanced Customer Insights – Understanding customer preferences and peak hours.
+
 📦 Optimized Inventory Management – Prevent stock shortages and reduce wastage.
+
 📊 Data-Driven Decision Making – Use insights to improve pricing and promotions.
+
 💸 Increased Profitability – Better financial management leading to higher revenue.
 
 
