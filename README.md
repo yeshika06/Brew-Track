@@ -68,6 +68,6 @@ BI to analyze sales trends, customer behavior, and financial performance. By
 leveraging data visualization and insights, the project helps in optimizing 
 inventory, improving sales strategies, and enhancing profitability. It provides 
 a data-driven approach for better decision-making, ensuring business growth 
-and efficiency
+and efficiency.
 
 
