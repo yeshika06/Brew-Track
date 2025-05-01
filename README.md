@@ -1,4 +1,4 @@
-# Brew-Track
+# Brew-Track ☕
 This project analyzes coffee shop sales data using Excel, MySQL, and Power BI to  provide valuable business insights. By integrating and visualizing sales trends,  customer behavior, and financial performance, the project helps in making data-driven  decisions. It aims to optimize sales strategies, improve inventory management, and enhance overall business efficiency through interactive dashboards and analytics. 
 
  # Objectives 
@@ -51,5 +51,23 @@ This project analyzes coffee shop sales data using Excel, MySQL, and Power BI to
 
 💸 Increased Profitability – Better financial management leading to higher revenue.
 
+# Repository Structure
+Excel File
+
+CSV File
+
+SQL Queries
+
+Power BI File
+
+Dashboard Image
+
+# Key Takeaways
+This coffee shop sales project effectively integrates Excel, MySQL, and Power 
+BI to analyze sales trends, customer behavior, and financial performance. By 
+leveraging data visualization and insights, the project helps in optimizing 
+inventory, improving sales strategies, and enhancing profitability. It provides 
+a data-driven approach for better decision-making, ensuring business growth 
+and efficiency
 
 
