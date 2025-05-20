@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BrewTrack Login</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #2d1e1b;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #f8f1ed;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .container {
+      background-color: #4b2e2b;
+      padding: 2.5rem 2rem;
+      border-radius: 20px;
+      width: 360px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      opacity: 0;
+    }
+
+    .container.show {
+      opacity: 1;
+    }
+
+    .container h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      background-color: #fffaf3;
+      color: #4b2e2b;
+      font-size: 1rem;
+    }
+
+    .container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #a47148;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background 0.3s ease;
+    }
+
+    .container button:hover {
+      background-color: #8b5e3c;
+    }
+
+    .switch {
+      margin-top: 1.2rem;
+      font-size: 0.95rem;
+    }
+
+    .switch a {
+      color: #ffd9b3;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .switch a:hover {
+      text-decoration: underline;
+    }
+
+    .logo {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-family: 'Georgia', serif;
+    }
+
+    .logo img {
+      height: 28px;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+
+    .logo span {
+      color: #ffcf99;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container fade-in" id="loginForm">
+    <div class="logo">
+      <span>BrewTrack</span>
+    </div>
+    <h2>Welcome Back</h2>
+    <input type="text" id="loginUsername" placeholder="Username" />
+    <input type="password" id="loginPassword" placeholder="Password" />
+    <button onclick="login()">Login</button>
+    <div class="switch">
+      Don't have an account? <a onclick="toggleForm('signup')">Sign Up</a>
+    </div>
+  </div>
+
+  <div class="container fade-in" id="signupForm" style="display: none;">
+    <div class="logo">
+      <span>BrewTrack</span>
+    </div>
+    <h2>Create Account</h2>
+    <input type="text" id="signupUsername" placeholder="Choose a Username" />
+    <input type="password" id="signupPassword" placeholder="Create Password" />
+    <button onclick="signUp()">Sign Up</button>
+    <div class="switch">
+      Already have an account? <a onclick="toggleForm('login')">Sign In</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleForm(formType) {
+      document.getElementById("loginForm").style.display = formType === 'login' ? 'block' : 'none';
+      document.getElementById("signupForm").style.display = formType === 'signup' ? 'block' : 'none';
+    }
+
+    function signUp() {
+      const username = document.getElementById("signupUsername").value.trim();
+      const password = document.getElementById("signupPassword").value;
+
+      if (!username || !password) {
+        alert("Please fill in both fields.");
+        return;
+      }
+
+      const users = JSON.parse(localStorage.getItem("users") || "{}");
+
+      if (users[username]) {
+        alert("Username already exists. Try a different one.");
+      } else {
+        users[username] = password;
+        localStorage.setItem("users", JSON.stringify(users));
+        alert("Account created! Please log in.");
+        toggleForm('login');
+      }
+    }
+
+    function login() {
+      const username = document.getElementById("loginUsername").value.trim();
+      const password = document.getElementById("loginPassword").value;
+
+      const users = JSON.parse(localStorage.getItem("users") || "{}");
+
+      if (users[username] && users[username] === password) {
+        window.location.href = "https://app.powerbi.com/links/fOEsRhsuna?ctid=0d217173-cca5-44ff-9710-bfa5166898e0&pbi_source=linkShare";
+      } else {
+        alert("Invalid username or password.");
+      }
+    }
+
+    // Add animation class on load
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.container').forEach(container => {
+        container.classList.add('show');
+      });
+    });
+  </script>
+
+</body>
+</html>
